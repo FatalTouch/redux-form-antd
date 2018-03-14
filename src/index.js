@@ -40,9 +40,6 @@ const textFieldMap = customMap(({ input: { onChange } }) => ({
 
 const selectFieldMap = customMap(
   ({ input: { onChange, value }, multiple, options }) => {
-    if (options && options.length > 0) {
-      value = value ? value : multiple ? [options[0].value] : options[0].value;
-    }
     return { dropdownMatchSelectWidth: true, value, style: { minWidth: 200 } };
   }
 );
